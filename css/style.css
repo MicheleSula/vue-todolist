@@ -1,25 +1,81 @@
+/* General rules */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+header {
+    height: 100px;
+    background-color: rgba(1,149,135,255);
+}
+
 main {
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightcyan;
+    background-color: rgba(213,218,212,255);
+}
+
+.content-wrapper-90 {
+    width: 90%;
+    margin: auto;
+}
+
+.image-circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: blue;
 }
 
 /* App/Container */
 .container {
-    height: 80%;
+    height: 90%;
     width: 80%;
     background-color: white;
     box-shadow: 5px 5px rgb(128, 128, 209);
     border-radius: 10px 10px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+.container-left {
+    height: 100%;
+    width: 33%;
+    background-color: brown;
+}
+
+.container-right {
+    height: 100%;
+    width: 67%;
+    background-color: rgb(115, 243, 89);
+}
+
+/* Container-left-section */
+/* User section */
+#user-bar {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+}
+
+#user-bar-contents {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Notification section */
+#notification-section {
+    background-color: #8edafc;
+    height: 65px;
+}
+
+/* Search-bar section */
+#search-bar-section {
+    height: 40px;
+    background-color: beige;
 }
 
 #input-container {
@@ -28,10 +84,6 @@ main {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
-}
-
-#add-button {
-    
 }
 
 .btn {

@@ -9,21 +9,36 @@
     </title>
 </head>
 <body>
+    <header>
+
+    </header>
     <main>
         <div id="app" class="container">
-            <!-- Add btn & input -->
-            <div id="input-container">
-                <input type="text" v-model="newTask">
-                <button id="add-button" @click="addTask" class="btn">Aggiungi</button>
+            <div class="container-left">
+                <div>
+                    <div id="user-bar">
+                        <div id="user-bar-contents" class="content-wrapper-90">
+                            <!-- Image placeholder -->
+                            <div id="user-profile-image" class="image-circle"></div>
+                            <h2>Michele</h2>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+
+                <div id="notification-section">
+                    Notifiche
+                </div>
+
+                <div id="search-bar-section">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
             </div>
-                
-            <div class="error" v-if="error">
-                <small style="color:red">Devi inserire almeno 5 caratteri</small>
-            </div>
-            <div class="tasks-container">
-                <ul>
-                    <li v-for="(task, index) in tasks" class="task">{{ task }}<button @click.stop="removeTask(index)">Elimina</button></li>
-                </ul>
+
+            <div class="container-right">
+
             </div>
         </div>
 
