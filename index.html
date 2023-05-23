@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jsnack
+    </title>
+</head>
+<body>
+    <main>
+        <div id="app" class="container">
+            <!-- Add btn & input -->
+            <div id="input-container">
+                <input type="text" v-model="newTask">
+                <button id="add-button" @click="addTask" class="btn">Aggiungi</button>
+            </div>
+                
+            <div class="error" v-if="error">
+                <small style="color:red">Devi inserire almeno 5 caratteri</small>
+            </div>
+            <div class="tasks-container">
+                <ul>
+                    <li v-for="(task, index) in tasks" class="task">{{ task }}<button @click.stop="removeTask(index)">Elimina</button></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </main>
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+    
+</body>
+</html>
